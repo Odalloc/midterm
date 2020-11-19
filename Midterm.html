@@ -3,22 +3,45 @@
 <head>
 	<meta charset="utf-8">
 	<title>Midterm</title>
+<style>
+    body{
+        background-color: #DAFBFF;
+    }
+    input[type=text]{
+        border: none;
+        margin-top: 20px;
+    }
+    .btn{
+        background-color: #CDEAF7;
+        border-radius: 15px;
+        border-color: blue;
+        color: red;
+        font-size: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+</style>
 </head>
 <body>
     <input type="text" id="num1">
     <input type="text" id="num2">
     <input type="text" id="num3">
-    <button class="btn" type="button" onclick="getInputValue();">Click me!</button>
+    <button class="btn" type="button" onclick="getValue();">Click me</button>
 
 <script>
-	function getInputValue(){    
-    var input1 = document.getElementById("num1").value;
-    var input2 = document.getElementById("num2").value;
-    var input3 = document.getElementById("num3").value;
-          
-    for(input1 = 1; input1 <= input2; input1++){ 		
-        var result = input1 * input3;
-        document.write(input1 + " x " + input3 +" = "+ result + "<br>" )  
+    function getValue(){    
+           
+    var value1 =+ document.getElementById("num1").value;
+    var value2 =+ document.getElementById("num2").value;
+    var value3 =+ document.getElementById("num3").value;
+   
+    for (var i = value1; i <= value2; i++) {
+
+    var output = i * value3;
+    document.write(i + ' x ' + value3 +" = "+ output +"<br>" )
+
     }
 }
 </script>
